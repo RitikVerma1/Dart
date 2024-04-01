@@ -1,0 +1,19 @@
+//void means this function not returning anything
+
+//also here we dont have any datatype means it assumes ita a "dynamic"
+void main() {
+  print("Name: ${nameIs()} , age: ${ageIs()}");
+}
+
+//String is the return type of this function
+
+String nameIs() {
+  return "Dart";
+}
+
+int ageIs() {
+  return 23;
+}
+
+
+//try passing argument in function
