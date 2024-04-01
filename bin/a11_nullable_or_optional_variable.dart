@@ -15,8 +15,11 @@ void main() {
 
   String? s;
 
-  // print (s!.length);    // print length of s , and we are telling it that its not null, but it will throw error coz its null
+  // print (s!.length);
 
+  // print length of s , and we are telling it that its not null, but it will throw error coz its null
+
+//attempting to print the length of a string variable s, which is declared as nullable (String?). However, it's using the non-null assertion operator (!) before accessing the length property of s.
   s = "hello";
   print(s?.length);
   // Check if not null then print length else print Null
