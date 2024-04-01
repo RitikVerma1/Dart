@@ -18,6 +18,7 @@ void main() {
   print(b);
 
   const c = 30;
-  // Its compile time constant  // constant variable cant be assign value later onn.
+  // Its compile time constant
+  // constant variable cant be assign value later onn.
   print(c);
 }
