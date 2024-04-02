@@ -21,10 +21,10 @@ void main() {
 
 //attempting to print the length of a string variable s, which is declared as nullable (String?). However, it's using the non-null assertion operator (!) before accessing the length property of s.
   s = "hello";
-  print(s?.length);
+  print(s.length);
   // Check if not null then print length else print Null
 
-  print("Length Of this string is : ${s?.length}");
+  print("Length Of this string is : ${s.length}");
   // Check if null then print Null Else If not null then give the length
 
   String? p;
