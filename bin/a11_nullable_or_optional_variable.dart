@@ -30,5 +30,5 @@ void main() {
   String? p;
 
   print(p?.length ?? 0);
-  //if Null then print 0 instead of null.
+  //if Null then print 0 instead of null..
 }
