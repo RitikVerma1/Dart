@@ -2,7 +2,7 @@ void main() {
   //after dart version 2 it introduces the option of null variable
   // means we can create a variable with null value initially and later assign value to that variable
 
-  int? a = null;
+  int? a;
 
   // we can skip null here , because at initialization all variable are already null.
   print(a); //op:- Null
@@ -25,6 +25,7 @@ void main() {
   // Check if not null then print length else print Null
 
   print("Length Of this string is : ${s.length}");
+
   // Check if null then print Null Else If not null then give the length
 
   String? p;
