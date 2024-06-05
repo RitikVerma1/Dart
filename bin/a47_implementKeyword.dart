@@ -21,6 +21,7 @@ class Machine {
 }
 
 // Dog class extends Mammal and implements Animal and Machine
+//in implement we have to override everything and redefine in the class even the variable also.
 class Dog extends Animal implements Machine {
   @override
   void makeSound() {
