@@ -1,6 +1,6 @@
 //Anonymous function are the function that doesn't have a name but behave like a function
 
-// we use this alot in flutter
+// we use this a lot in flutter
 
 void main() {
   // Example 1: Anonymous function assigned to a variable

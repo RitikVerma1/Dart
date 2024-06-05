@@ -1,11 +1,11 @@
 void main() {
   String name = "dart";
   int age = 23;
-  nameIs(name, age); //We are passing "Parameters"
+  nameIs("name", age); //We are passing "Parameters"
 }
 
-// These are the positional argument, means argument that we accepted need to be in same potion as parameter.
-
+// These are the positional argument, means argument that we accepted need to be in same position/ORDER as parameter.
+// Datatype String/ int is important to declare otherwise dart will assume that the variable is dynamic.
 void nameIs(String name, int age) {
   // we are accepting "arguments"
   print(name);
