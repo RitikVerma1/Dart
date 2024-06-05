@@ -1,6 +1,6 @@
 void printInfo(String name, String gender, [String title = "sir/ma'am"]) {
   /*
-
+  Datatype of the parameter in not necessary but it improves readability. 
   
    "sir/ma'am": This is a default value assigned to the parameter title. If no value is provided for title when calling the 
   printInfo function, it will default to "sir/ma'am"
