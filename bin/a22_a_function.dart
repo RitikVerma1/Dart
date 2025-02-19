@@ -1,6 +1,6 @@
 //void means this function not returning anything
 
-//also here we dont have any datatype means it assumes ita a "dynamic"
+//also here we don't have any datatype means it assumes ita a "dynamic"
 void main() {
   print("Name: ${nameIs()} , age: ${ageIs()}");
 }

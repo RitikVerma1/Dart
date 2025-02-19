@@ -12,8 +12,8 @@ void main() {
 }
 
 class TestStatic {
-//Static variable
-  static int age = 20;
+//Static variable   // mostly sed if something is constant
+  static final int age = 20;
 
   static String name = "dart";
 

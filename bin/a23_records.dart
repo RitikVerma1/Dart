@@ -6,7 +6,7 @@ void main() {
 
   print(a.$2); // print only second value ie. string in our case;
 
-  //
+  //here $2 is a getter
 }
 
 (int, String, bool, double) ReturnMultiple() {

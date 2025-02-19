@@ -11,3 +11,18 @@ void main() {
   //
   return (age: 23, name: "ritik");
 }
+
+// positional and named records  below
+
+/* 
+void main() {
+  var a = returnThis();
+  print(a.age);
+  print(a.$1);
+  print(a.name);
+}
+
+(String title, {String name, int age}) returnThis() {
+  return ("mr", name: "ritik", age: 24);
+}
+*/

@@ -1,4 +1,4 @@
-// immutable classes are those where the variable of the class cant change by outside , or once passed in argument via constructor it can't change
+// immutable classes are those where the variable and values in the class cant change by outside , or once passed in argument via constructor it can't change
 
 void main() {
   Cookie("circle", 2);

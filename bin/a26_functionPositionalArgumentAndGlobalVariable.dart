@@ -1,7 +1,8 @@
 void main() {
-  String name = "dart";
+  String name =
+      "dart"; //we can also make it a global variable then we dont have to pass it as a parameter and it will be accisible in the entire file but not recommended.
   int age = 23;
-  nameIs("name", age); //We are passing "Parameters"
+  nameIs(name, age); //We are passing "Parameters"
 }
 
 // These are the positional argument, means argument that we accepted need to be in same position/ORDER as parameter.

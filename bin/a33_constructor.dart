@@ -10,17 +10,23 @@ void main() {
 
 //class name uses PascalCase
 class Cookie {
+  //public variable, accessed by whole class
   //nullable variable
   String? shape;
-  double? size;
+  double size;
 
 //creating a constructor ,constructor name should be same as class name
 // a syntax of constructor looks exactly like a function because its a special type of function but still a function.
 
-  Cookie(this.shape, this.size) {
+//constructor could be used without body
+//  Cookie(this.shape, this.size);
+
+  Cookie(this.shape, this.size) //we are passing parameterized constructor
+  {
+    // if we defined these variable in the constructors parameter, it would have only been access inside constructors body, not in entire class,thats why we defined in in class
     print(this);
     //op:Instance of 'Cookie'    //"this" keyword give te access of the current class.
-    //If we don't use "this" is parameter the dart will think "shape" and "size" is a dynamic variable. (vid 35).
+    //If we don't use "this" is parameter the dart will think "shape" and "size" is a new variable we are creating and its dynamic variable. (vid 35).
     method1();
     //print();
   }
