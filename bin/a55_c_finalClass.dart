@@ -7,6 +7,7 @@ A final class is simmiler to sealed class that cannot be extended (inherited) or
 and prevent any modification by inheritance.
 */
 
+// only base, sealed or final class can extend it not regular class.
 // Defining a final class
 final class AppConfig {
   final String appName = "My Flutter App";
@@ -15,6 +16,8 @@ final class AppConfig {
     print("App Name: $appName");
   }
 }
+
+//  class Text extends AppConfig{}    // here it will give an error because a normal class can't extend final class
 
 void main() {
   AppConfig config = AppConfig();

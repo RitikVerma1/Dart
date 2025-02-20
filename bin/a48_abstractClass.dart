@@ -12,6 +12,7 @@ A subclass must override all abstract methods.
 ✅ When you want some methods to be mandatory (abstract) and some optional (concrete).
 ✅ When you don’t want to create objects of the base class itself, but only of its subclasses.
 
+Abstract Class → Can be extended or implemented, and can contain both concrete and abstract methods.
 
 
 */

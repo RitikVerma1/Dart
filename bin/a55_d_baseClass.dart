@@ -2,7 +2,7 @@
 A base class allows inheritance but does not allow implementation. This means you can extend it,
  but you cannot implement it as an interface.
 
- only base, sealed or final class can extend it nor regular class.
+ only base, sealed or final class can extend it not regular class.
 
  Use a base class when you want to force inheritance but prevent interface-style implementation.
 🔹 Ideal for hierarchical relationships, like when all child classes should share a base functionality.

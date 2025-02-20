@@ -1,5 +1,9 @@
 {
     "cSpell.words": [
         "unnessecoryly"
-    ]
+    ],
+    "editor.tokenColorCustomizations": {
+        "comments": "",
+        "textMateRules": []
+    }
 }
