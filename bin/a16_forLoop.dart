@@ -1,6 +1,6 @@
 void main() {
   String str = "Ritik";
-  // for loop and while loops are entry control loops while do while loop is exit control
+  // for loop and while loops are entry control loops while, do while loop is exit control
 
   for (int i = 0; i < 4; i++) {
     print("Hello World");

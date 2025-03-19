@@ -6,7 +6,7 @@ void main() {
 
   print(marks);
 
-  print(marks["Student1"]);
+  print(marks["Student1"]); //passing key
 
   mapTwo().printIt();
 }

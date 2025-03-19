@@ -12,7 +12,7 @@ void main() {
   // Example 2: Passing an anonymous function as an argument
   var numbers = [1, 2, 3, 4, 5];
   numbers.forEach((number) {
-    print(number * 2);
+    print("from checkpoint ${number * 2}");
   });
   // Output:
   // 2

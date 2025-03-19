@@ -7,6 +7,8 @@ void main() {
   print(call.age);
 }
 
+//The return type {} indicates a record with named fields.
+// this {} is very very imp for named feild
 ({String name, int age}) demo() {
   //
   return (age: 23, name: "ritik");
@@ -16,7 +18,7 @@ void main() {
 
 /* 
 void main() {
-  var a = returnThis();
+  var a = returnThis(); 
   print(a.age);
   print(a.$1);
   print(a.name);

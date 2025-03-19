@@ -2,6 +2,7 @@ void main() {
   demo(name: "dart", age: 23, b: true);
 }
 
+//The return type {} indicates a record with named fields.
 void demo(
     {required String name, required int age, required bool b, String? s}) {
   // required : its compulsory to provide value

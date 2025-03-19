@@ -1,5 +1,6 @@
 // Records used to return multiple value of multiple datatype from 1 function
 //
+//void main() is a globle function since its not inside any class
 void main() {
   var a = ReturnMultiple();
   print(a); // print all value of a

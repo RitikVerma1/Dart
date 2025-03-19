@@ -1,3 +1,4 @@
+//void main() is a globle function since its not inside any class
 void main() {
   // single line comment
 
