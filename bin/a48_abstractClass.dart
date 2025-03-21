@@ -1,4 +1,7 @@
 /*eplaination
+  //abstract means is not concrete, not fully defined, or incomplete on its own.
+// an abstract class is a blueprint for other classes. 
+//It cannot be instantiated directly and is meant to be extended (inherited) by other classes.
 
 An abstract class is a class that cannot be 
 instantiated(made object of it) directly.
