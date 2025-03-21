@@ -1,4 +1,46 @@
 void main() {
+  // Create an instance of Mammals and set up the animal
+  Mammals mammal = Mammals();
+  mammal.setupAnimal("Rabbit", 30);
+}
+
+// Base class: LifeOnEarth
+class LifeOnEarth {
+  String? speciesName;
+  int? speciesSize;
+
+  void SurvivalChance() {
+    if (speciesSize != null && speciesSize! < 50) {
+      print("Survival chance less than 30% for $speciesName");
+    } else {
+      print("Survival chance more than 50% for $speciesName");
+    }
+  }
+}
+
+// Intermediate class: SmallAnimals (inherits from LifeOnEarth)
+class SmallAnimals extends LifeOnEarth {
+  // Method to set values and call survival check
+  void setupAnimal(String name, int size) {
+    speciesName = name; // Assign species name
+    speciesSize = size; // Assign species size
+    SurvivalChance(); // Call the inherited function
+  }
+}
+
+// Derived class: Mammals (inherits from SmallAnimals)
+class Mammals extends SmallAnimals {
+  @override
+  void SurvivalChance() {
+    // Overriding the method to add extra behavior
+    print("Checking survival chances for a mammal...");
+    super.SurvivalChance(); // Call the original method from SmallAnimals
+  }
+}
+
+//*********************************** */ */
+
+void main() {
   Child ch = Child();
 
   print(ch.surname);

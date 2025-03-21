@@ -1,24 +1,38 @@
 void main() {
-  Cokkie cke = Cokkie(165, age: 20, name: "flutter");
+  Mammals ml = Mammals();
+  ml.setupAnimal("rabbit", 30);
 }
 
-class Cokkie {
-  int age;
-  String? name;
-  int height;
+// Base class: LifeOnEarth
+class LifeOnEarth {
+  String? speciesName;
+  int? speciesSize;
 
-  Cokkie(this.height, {required this.age, this.name}) {
-    print(height);
-
-    m1(age);
-    m2(name);
+  void SurvivalChance() {
+    if (speciesSize != null && speciesSize! < 50) {
+      print("Survival chance less than 30% for $speciesName");
+    } else {
+      print("Survival chance more than 50% for $speciesName");
+    }
   }
+}
 
-  void m1(int ageIs) {
-    print("$ageIs from m1");
+// Intermediate class: SmallAnimals (inherits from LifeOnEarth)
+class SmallAnimals extends LifeOnEarth {
+  // Method to set values and call survival check
+  void setupAnimal(String name, int size) {
+    speciesName = name; // Assign species name
+    speciesSize = size; // Assign species size
+    SurvivalChance(); // Call the inherited function
   }
+}
 
-  void m2(String? nameIs) {
-    print("$name from m2");
+// Derived class: Mammals (inherits from SmallAnimals)
+
+class Mammals extends SmallAnimals {
+  @override
+  void SurvivalChance() {
+    print("checking survival chance for $speciesName");
+    super.SurvivalChance();
   }
 }
