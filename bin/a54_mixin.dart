@@ -18,6 +18,11 @@ mixin Second {
 
 //multiple mixin
 class Third with First, Second {
+  //** */
+  //Dart does not allow overriding mixin variables (fields) directly in a class.
+  // The only way to change a mixin's variable in the subclass is to use a getter.
+  @override
+  int get b => 0; // Overrides the mixin's variable
   @override
   void printValue() {
     print(a * b);

@@ -1,4 +1,7 @@
 void main() {
+//*  any member of class(like variable and function) except constructor can't have same name as class name
+// */
+
   //here Cookie is default constructor
   //
   //printing values from class by creating instance of the class

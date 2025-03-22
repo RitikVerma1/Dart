@@ -1,48 +1,29 @@
 void main() {
-  One one = Two();
-
-  one.printmethod1();
-  one.printmethod2();
-
-  one = Three();
-  one.printmethod1();
+  ThirdVal thvl = ThirdVal();
+  thvl.printInfo();
 }
 
-abstract class One {
-  int a = 20;
-  void printmethod1();
-
-  void printmethod2() {
-    print("print method 2");
+mixin First {
+  int firstVal = 10;
+  void printInfo() {
+    print(firstVal);
   }
 }
 
-class Two implements One {
-  @override
-  int a = 20;
-
-  @override
-  void printmethod1() {
-    print("print method two override");
-  }
-
-  @override
-  void printmethod2() {
-    print("printmethod 2 override ");
+mixin Second {
+  int secondVal = 10;
+  void printInfo() {
+    print(secondVal);
   }
 }
 
-class Three implements Two {
+class ThirdVal with First, Second {
+  int d = 3;
   @override
-  int a = 20;
+  int secondVal = 0;
 
   @override
-  void printmethod1() {
-    print("class 3");
-  }
-
-  @override
-  void printmethod2() {
-    print("class 3 ");
+  void printInfo() {
+    print(firstVal * secondVal * d);
   }
 }
