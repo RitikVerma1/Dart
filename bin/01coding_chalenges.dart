@@ -24,6 +24,6 @@ class Two implements One {
 
   @override
   void printmethod2() {
-    print("printmethod 2 override");
+    print("printmethod 2 override ");
   }
 }
