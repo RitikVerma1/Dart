@@ -23,6 +23,8 @@ class Third with First, Second {
   // The only way to change a mixin's variable in the subclass is to use a getter.
   @override
   int get b => 0; // Overrides the mixin's variable
+
+//functions can be override directly
   @override
   void printValue() {
     print(a * b);
