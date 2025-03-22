@@ -19,7 +19,7 @@ class Two implements One {
 
   @override
   void printmethod1() {
-    print("two");
+    print("print method two override");
   }
 
   @override
