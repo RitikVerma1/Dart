@@ -1,6 +1,6 @@
 /*
 abstraction is the process of hiding the internal details and complexity of the object 
-and on;y exposing essential features and functionality
+and only exposing essential features and functionality
 
 How is Abstraction Used in Dart?
 In Dart, abstraction is done using abstract classes.

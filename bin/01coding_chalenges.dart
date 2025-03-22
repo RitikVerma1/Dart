@@ -1,7 +1,11 @@
 void main() {
   One one = Two();
+
   one.printmethod1();
   one.printmethod2();
+
+  one = Three();
+  one.printmethod1();
 }
 
 abstract class One {
@@ -25,5 +29,20 @@ class Two implements One {
   @override
   void printmethod2() {
     print("printmethod 2 override ");
+  }
+}
+
+class Three implements Two {
+  @override
+  int a = 20;
+
+  @override
+  void printmethod1() {
+    print("class 3");
+  }
+
+  @override
+  void printmethod2() {
+    print("class 3 ");
   }
 }
