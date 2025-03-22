@@ -1,5 +1,5 @@
 /* (interface = contract/rules  &  abstract = Blue Print)
-//*When a class implements another class, it does not inherit its methods. it must ovveride all methods
+When a class implements another class, it does not inherit its methods. it must ovveride all methods
 
 In Dart, an interface is a way to define a contract(rules or expectations that class must follow) that classes can implement.
  Unlike other languages like Java, Dart does not have a separate interface keyword. 
