@@ -1,38 +1,29 @@
 void main() {
-  Mammals ml = Mammals();
-  ml.setupAnimal("rabbit", 30);
+  One one = Two();
+  one.printmethod1();
+  one.printmethod2();
 }
 
-// Base class: LifeOnEarth
-class LifeOnEarth {
-  String? speciesName;
-  int? speciesSize;
+abstract class One {
+  int a = 20;
+  void printmethod1();
 
-  void SurvivalChance() {
-    if (speciesSize != null && speciesSize! < 50) {
-      print("Survival chance less than 30% for $speciesName");
-    } else {
-      print("Survival chance more than 50% for $speciesName");
-    }
+  void printmethod2() {
+    print("print method 2");
   }
 }
 
-// Intermediate class: SmallAnimals (inherits from LifeOnEarth)
-class SmallAnimals extends LifeOnEarth {
-  // Method to set values and call survival check
-  void setupAnimal(String name, int size) {
-    speciesName = name; // Assign species name
-    speciesSize = size; // Assign species size
-    SurvivalChance(); // Call the inherited function
-  }
-}
-
-// Derived class: Mammals (inherits from SmallAnimals)
-
-class Mammals extends SmallAnimals {
+class Two implements One {
   @override
-  void SurvivalChance() {
-    print("checking survival chance for $speciesName");
-    super.SurvivalChance();
+  int a = 20;
+
+  @override
+  void printmethod1() {
+    print("two");
+  }
+
+  @override
+  void printmethod2() {
+    print("printmethod 2 override");
   }
 }

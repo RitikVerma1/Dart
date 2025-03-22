@@ -8,7 +8,7 @@ instantiated(made object of it) directly.
 It can have:
 Abstract methods (methods without implementation).
 Concrete methods (methods with implementation).
-A subclass must override all abstract methods.
+A subclass must override all abstract and concrete methods.
 
  When to Use abstract Classes?
 ✅ When you want to provide a base structure with some shared behavior.
