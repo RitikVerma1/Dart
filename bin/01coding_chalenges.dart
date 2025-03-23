@@ -8,25 +8,15 @@ void main() {
   cl3.printData();
 }
 
-sealed class Class1 {
+final class Class1 {
   int a = 10;
   void printInfo() => print("class1");
 }
 
-class Class2 extends Class1 {
+sealed Class2 extends Class1 {
   @override
   void printInfo() {
     print("class 2 $a");
   }
 }
 
-class Class3 extends Class2 {
-  @override
-  void printInfo() {
-    print("class 3 ");
-  }
-
-  void printData() {
-    print(a);
-  }
-}
