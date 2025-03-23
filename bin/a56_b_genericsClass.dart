@@ -39,7 +39,7 @@ void main() {
 }
 
 class Students<T, A> {
-  final T name;       // or just Tname;
+  final T name;       // or just T name;
   final A age;        // final not required
 
   Students(this.name, this.age);

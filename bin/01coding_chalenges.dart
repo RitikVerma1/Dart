@@ -1,22 +1,28 @@
-import 'a55_b_sealedClass.dart';
+import 'dart:async';
 
 void main() {
-  Class1 cl = Class2();
-  cl.printInfo();
+  List<dynamic> dList = [10.0, 20, 30, 40, StudentsName("flutter")];
 
-  Class3 cl3 = Class3();
-  cl3.printData();
+  print(dList[2]);
+  dList[4].printInfo();
+
+  Demo dem = Demo("flutter", 200000);
 }
 
-final class Class1 {
-  int a = 10;
-  void printInfo() => print("class1");
-}
-
-sealed Class2 extends Class1 {
-  @override
+class StudentsName {
+  String name;
+  StudentsName(this.name) {
+    print(name);
+  }
   void printInfo() {
-    print("class 2 $a");
+    print("class student");
   }
 }
 
+class Demo<T, A> {
+  T name;
+  A age;
+  Demo(this.name, this.age) {
+    print("$name $age");
+  }
+}
