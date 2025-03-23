@@ -1,5 +1,17 @@
 /* 
 Why Use Sealed Classes?
+
+a sealed class cannot be extended outside this file, but can be extended within it.
+
+Sealed classes only restrict direct extension from outside files.
+
+Inside the same file, normal inheritance rules apply.
+
+Defining a sealed class, meaning only specific classes within the same file can extend it.
+sealed class are a bit like abstract class, you cant make its object
+
+you can't access sealed class outside the dart file.
+
 Prevents unwanted inheritance: Only allowed(direct subclass not subclasse's child) subclasses can extend or implement the sealed class.
 Useful for handling states: Helps in managing states in Flutter apps (e.g., loading, success, error).
 Compile-time safety: Ensures that all possible cases are handled (especially useful in switch statements).
@@ -9,11 +21,6 @@ Navigation and routing in Flutter
 Ensuring only specific implementations exist for a class
 This makes your code safer, cleaner, and more predictable! 🚀
 */
-
-// Defining a sealed class, meaning only specific classes within the same file can extend it.
-//sealed class are a bit like abstract class, you cant make its object
-
-//you can't access sealed class outside the dart file.
 
 void main() {
   Animal anml = Dog("dog func constructor called");

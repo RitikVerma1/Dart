@@ -1,29 +1,32 @@
+import 'a55_b_sealedClass.dart';
+
 void main() {
-  ThirdVal thvl = ThirdVal();
-  thvl.printInfo();
+  Class1 cl = Class2();
+  cl.printInfo();
+
+  Class3 cl3 = Class3();
+  cl3.printData();
 }
 
-mixin First {
-  int firstVal = 10;
+sealed class Class1 {
+  int a = 10;
+  void printInfo() => print("class1");
+}
+
+class Class2 extends Class1 {
+  @override
   void printInfo() {
-    print(firstVal);
+    print("class 2 $a");
   }
 }
 
-mixin Second {
-  int secondVal = 10;
+class Class3 extends Class2 {
+  @override
   void printInfo() {
-    print(secondVal);
+    print("class 3 ");
   }
-}
 
-class ThirdVal with First, Second {
-  int d = 3;
-  @override
-  int secondVal = 0;
-
-  @override
-  void printInfo() {
-    print(firstVal * secondVal * d);
+  void printData() {
+    print(a);
   }
 }
