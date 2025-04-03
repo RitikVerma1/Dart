@@ -1,15 +1,14 @@
 void main() {
-  animal ani = animal(name: "tiger");
-}
+  Map Students = {
+    "marks1": 20,
+    "marks2": 20,
+    "marks3": 20,
+    "marks4": 20,
+    "marks5": 20
+  };
 
-class animal {
-  String name;
-
-  animal({required this.name}) {
-    void prinntInfo() {
-      print(name);
-    }
-
-    prinntInfo();
-  }
+  print(Students);
+  print(Students["marks1"]);
+  Students["marks1"] = 22;
+  Students.addAll({"marks6": 24});
 }
