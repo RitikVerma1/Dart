@@ -12,7 +12,7 @@ void main() {
   final employee2 = Career("AB", CareerOptions.softwareDev);
   final employee3 = Career("AB", CareerOptions.gameDev);
 
-//  print(employee3.employeeNameDesignation())
+  employee3.employeeNameDesignation();
 
   employee3.fn(); //op gamedev
 }
@@ -24,7 +24,7 @@ class Career {
   Career(this.name, this.careerOptions);
 
   void employeeNameDesignation() {
-    print("$name : $careerOptions");
+    print("$name : ${careerOptions.name}");
   }
 
   void fn() {

@@ -9,7 +9,9 @@ void main() {
   }
 
   // a better way is 'key' and 'val' could be anything, they are just placeholder for datatype
+//The forEach method in Dart takes a function as an argument.
 
+//You passed a function without a name, making it an anonymous function.
   marks.forEach((key, val) {
     print("$key :: $val ");
   });

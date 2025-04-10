@@ -30,4 +30,16 @@ void main() {
       print("$key $val");
     });
   });
+
+/*
+map() applies the function to each element of lst, which prints each map.
+
+toList() forces execution by converting the result into a list.
+
+The new list is not stored, but the prints inside map() still run.
+
+Why Does print(e); Work?
+Even though it's inside map(), print(e); 
+runs immediately for each element during iteration.
+ */
 }
