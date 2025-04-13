@@ -44,6 +44,7 @@ async because its an asynchronous function
 //since we added async to void main() and async function required to be Future, shouldn't we add Future void main() async{},
 //Future not necessary before void (you can add but not required)
 //you can write Future <void>....  , but not necessary
+// * Future <void> vs void : void is fire and forget but future <void> is not, it will wait for async function and continue to listen to that
 void main() async {
   //async coz the await expression can only be used in an async function.
   print("Line 1");
