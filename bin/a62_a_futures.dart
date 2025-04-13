@@ -41,10 +41,9 @@ async because its an asynchronous function
 //
 //
 
-/*
-//since we added async to void main() and async function required to be Future, shiuldn't we add Future void main() async{},  
-//Future not necessery before void (you can add but not required)
-//you can write Future <void>....  , but not necessary 
+//since we added async to void main() and async function required to be Future, shouldn't we add Future void main() async{},
+//Future not necessary before void (you can add but not required)
+//you can write Future <void>....  , but not necessary
 void main() async {
   //async coz the await expression can only be used in an async function.
   print("Line 1");
@@ -60,21 +59,18 @@ Future<String> giveResultAfterTwoSec() {
   });
 }
 
-
-*/
-
 // void main() async {
 //   print("line1");
 //   final result = await giveResultAfterTwoSec();
-//   // await stops further execution , after delay , line 3 will print
+// await stops further execution , after delay , line 3 will print
 //   print(result);
 //   print("line 3");
 // }
 
-// // we can write async here or just write in return before {}
-// // by marking a function async , we allow use of await
+// we can write async here or just write in return before {}
+// by marking a function async , we allow use of await
 // Future<String> giveResultAfterTwoSec() async {
-//   //return ("Hey !!!! from Future");
+//return ("Hey !!!! from Future");
 //   return Future.delayed(Duration(seconds: 2), () {
 //     return ("Hi");
 //   });
