@@ -101,3 +101,23 @@ Future<String> giveResultAfterTwoSec() {
     return "Hi from Future";
   });
 }
+
+//* without async and await
+//* here Even though you didn't use async/await, Dart still schedules the delayed task (the Future) to run after 2 seconds.
+
+//* When do you need async and await?
+//* You only need them if you want to: Wait for the result of the Future before moving on, or
+
+//* Use the result of an asynchronous operation in a synchronous-looking way.
+
+void main() {
+  print("flutter");
+  returnAfterDelay();
+  print("dart");
+}
+
+Future returnAfterDelay() {
+  return Future.delayed(Duration(seconds: 2), () {
+    print("hey");
+  });
+}
