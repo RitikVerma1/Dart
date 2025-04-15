@@ -10,10 +10,4 @@ void main() async {
   } catch (e) {
     print('error occurred: $e');
   }
-
-  http.get(url).then((val) {
-    print(val.body);
-  }).catchError((err) {
-    print("this error occurred: $err");
-  });
 }
