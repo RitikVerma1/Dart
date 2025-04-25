@@ -44,10 +44,10 @@ void main() {
     var users = jsonDecode(val.body);
 
     // --- Part 1: Print key-value pairs of user with ID 1 ---
-    print('--- User with ID 1 ---');
+    //print('--- User with ID 1 ---');
     var user1 = users.firstWhere((user) => user['id'] == 1);
     user1.forEach((key, value) {
-      print('$key: $value');
+      //print('$key: $value');
     });
 
     // --- Part 2: Print key-value pairs for all users ---

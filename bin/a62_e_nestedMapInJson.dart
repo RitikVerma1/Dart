@@ -48,73 +48,104 @@ void printUserDetails(Map user, [int indentLevel = 0]) {
 
 // * Professional Code below
 
-/* 
+/* import 'package:http/http.dart' as http;
 import 'dart:convert';
-import 'package:http/http.dart' as http;
 
-/// A service class to handle user data operations with the API.
-class UserService {
-  static const String _baseUrl = 'jsonplaceholder.typicode.com';
-  static const String _usersEndpoint = '/users';
-
-  /// Fetches user data from the API and processes it.
-  Future<void> fetchAndDisplayUsers() async {
-    try {
-      final users = await _fetchUsers();
-      _displaySingleUser(users, userId: 1);
-      _displayAllUsers(users);
-    } catch (e) {
-      print('Error: Failed to fetch or process user data: $e');
-    }
-  }
-
-  /// Fetches user data from the API.
-  Future<List<Map<String, dynamic>>> _fetchUsers() async {
-    final url = Uri.http(_baseUrl, _usersEndpoint);
-    final response = await http.get(url);
-
-    if (response.statusCode == 200) {
-      return List<Map<String, dynamic>>.from(jsonDecode(response.body));
-    } else {
-      throw Exception('Failed to load users: ${response.statusCode}');
-    }
-  }
-
-  /// Displays details for a single user by ID.
-  void _displaySingleUser(List<Map<String, dynamic>> users, {required int userId}) {
-    print('--- User with ID $userId ---');
-    final user = users.firstWhere(
-      (user) => user['id'] == userId,
-      orElse: () => throw Exception('User with ID $userId not found'),
-    );
-    _printUserDetails(user);
-  }
-
-  /// Displays details for all users.
-  void _displayAllUsers(List<Map<String, dynamic>> users) {
-    print('\n--- All Users ---');
-    for (final user in users) {
-      print('\nUser ID: ${user['id']}');
-      _printUserDetails(user);
-    }
-  }
-
-  /// Prints user details with proper indentation for nested fields.
-  void _printUserDetails(Map<String, dynamic> user, {int indentLevel = 0}) {
-    final indent = '  ' * indentLevel;
-    user.forEach((key, value) {
-      if (value is Map) {
-        print('$indent$key:');
-        _printUserDetails(value.cast<String, dynamic>(), indentLevel: indentLevel + 1);
-      } else {
-        print('$indent$key: $value');
-      }
-    });
+/// A simple application that fetches and displays user data from JSONPlaceholder API
+void main() async {
+  try {
+    final users = await fetchUsers();
+    
+    // Display the user with ID 1
+    displaySingleUser(users);
+    
+    // Display all users
+    displayAllUsers(users);
+  } catch (error) {
+    print('Error: ${error.toString()}');
   }
 }
 
-void main() async {
-  final userService = UserService();
-  await userService.fetchAndDisplayUsers();
+/// Fetches user data from the JSONPlaceholder API
+/// 
+/// Returns a List of user objects or throws an exception if the request fails
+Future<List<dynamic>> fetchUsers() async {
+  // Define the API endpoint using HTTPS for security
+  final url = Uri.https('jsonplaceholder.typicode.com', 'users');
+  
+  try {
+    final response = await http.get(url);
+    
+    // Check if the request was successful
+    if (response.statusCode == 200) {
+      return jsonDecode(response.body) as List;
+    } else {
+      throw Exception('Failed to fetch users. Status code: ${response.statusCode}');
+    }
+  } catch (error) {
+    throw Exception('Network error: ${error.toString()}');
+  }
+}
+
+/// Displays details for the user with ID 1
+void displaySingleUser(List<dynamic> users) {
+  print('\n=== User with ID 1 ===');
+  
+  final user1 = users.firstWhere(
+    (user) => user['id'] == 1,
+    orElse: () => null,
+  );
+  
+  if (user1 != null) {
+    printUserDetails(user1);
+  } else {
+    print('User with ID 1 not found.');
+  }
+}
+
+/// Displays details for all users in the list
+void displayAllUsers(List<dynamic> users) {
+  print('\n=== All Users ===');
+  
+  for (final user in users) {
+    print('\nUser ID: ${user['id']}');
+    printUserDetails(user);
+  }
+}
+
+/// Recursively prints all fields of a user, including nested objects
+/// 
+/// [userData] - The user data map to print
+/// [indentLevel] - The current indentation level for formatting nested objects
+void printUserDetails(Map<dynamic, dynamic> userData, [int indentLevel = 0]) {
+  final indent = '  ' * indentLevel;
+  
+  userData.forEach((key, value) {
+    if (value is Map) {
+      print('$indent$key:');
+      printUserDetails(value, indentLevel + 1);
+    } else if (value is List) {
+      print('$indent$key:');
+      _printList(value, indentLevel + 1);
+    } else {
+      print('$indent$key: $value');
+    }
+  });
+}
+
+/// Helper function to print list items with proper formatting
+void _printList(List items, int indentLevel) {
+  final indent = '  ' * indentLevel;
+  
+  for (var i = 0; i < items.length; i++) {
+    final item = items[i];
+    
+    if (item is Map) {
+      print('$indent- Item ${i + 1}:');
+      printUserDetails(item, indentLevel + 1);
+    } else {
+      print('$indent- $item');
+    }
+  }
 }
 */
